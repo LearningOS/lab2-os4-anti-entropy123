@@ -1,3 +1,20 @@
+use crate::{config::*, mm::PhysAddr, task::Task};
+
+#[repr(align(4096))]
+#[derive(Copy, Clone)]
+struct KernelStack {
+    data: [u8; KERNEL_STACK_SIZE],
+}
+
+static mut KERNEL_STACK: [KernelStack; MAX_APP_NUM] = [KernelStack {
+    data: [0; KERNEL_STACK_SIZE],
+}; MAX_APP_NUM];
+
+pub fn get_kernel_stack_phyaddr(app_id: usize) -> PhysAddr {
+    // todo: maybe should use UPSafeCell?
+    PhysAddr::from(unsafe { KERNEL_STACK[app_id].data.as_ptr() as usize } + KERNEL_STACK_SIZE)
+}
+
 pub fn get_num_app() -> usize {
     extern "C" {
         fn _num_app();
@@ -5,7 +22,7 @@ pub fn get_num_app() -> usize {
     unsafe { (_num_app as usize as *const usize).read_volatile() }
 }
 
-pub fn get_app_data(app_id: usize) -> &'static [u8] {
+pub fn get_app_elf(app_id: usize) -> &'static [u8] {
     extern "C" {
         fn _num_app();
     }
@@ -19,4 +36,8 @@ pub fn get_app_data(app_id: usize) -> &'static [u8] {
             app_start[app_id + 1] - app_start[app_id],
         )
     }
+}
+
+pub fn setup_task_cx(app_id: usize) -> usize {
+    usize::from(get_kernel_stack_phyaddr(app_id)) - core::mem::size_of::<Task>()
 }

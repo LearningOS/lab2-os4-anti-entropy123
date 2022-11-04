@@ -1,0 +1,371 @@
+(rustup target list | grep "riscv64gc-unknown-none-elf (installed)") || rustup target add riscv64gc-unknown-none-elf
+riscv64gc-unknown-none-elf (installed)
+cargo install cargo-binutils
+    Updating crates.io index
+     Ignored package `cargo-binutils v0.3.6` is already installed, use --force to override
+make[1]: 进入目录“/home/yjn/rust_project/lab2-os4-anti-entropy123/user”
+target/riscv64gc-unknown-none-elf/release/ch2b_power_3 target/riscv64gc-unknown-none-elf/release/ch2b_bad_instructions target/riscv64gc-unknown-none-elf/release/ch2b_power_5 target/riscv64gc-unknown-none-elf/release/ch2b_power_7 target/riscv64gc-unknown-none-elf/release/ch2b_bad_register target/riscv64gc-unknown-none-elf/release/ch2b_hello_world target/riscv64gc-unknown-none-elf/release/ch2b_bad_address target/riscv64gc-unknown-none-elf/release/ch3b_sleep target/riscv64gc-unknown-none-elf/release/ch3b_yield2 target/riscv64gc-unknown-none-elf/release/ch3b_sleep1 target/riscv64gc-unknown-none-elf/release/ch3b_yield0 target/riscv64gc-unknown-none-elf/release/ch3_taskinfo target/riscv64gc-unknown-none-elf/release/ch3b_yield1 target/riscv64gc-unknown-none-elf/release/ch4_mmap3 target/riscv64gc-unknown-none-elf/release/ch4_mmap0 target/riscv64gc-unknown-none-elf/release/ch4_mmap1 target/riscv64gc-unknown-none-elf/release/ch4_mmap2 target/riscv64gc-unknown-none-elf/release/ch4_unmap2 target/riscv64gc-unknown-none-elf/release/ch4_unmap
+   Compiling scopeguard v1.1.0
+   Compiling spin v0.5.2
+   Compiling spin v0.7.1
+   Compiling bitflags v1.3.2
+   Compiling lock_api v0.4.6
+   Compiling lazy_static v1.4.0
+   Compiling buddy_system_allocator v0.6.0
+   Compiling spin v0.9.4
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 1.13s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.32s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.32s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.32s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.35s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.32s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.32s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.34s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.35s
+   Compiling user_lib v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/user)
+    Finished release [optimized] target(s) in 0.33s
+[build.py] application ch2b_bad_address start with address 0x80400000
+[build.py] application ch2b_bad_instructions start with address 0x80400000
+[build.py] application ch2b_bad_register start with address 0x80400000
+[build.py] application ch2b_hello_world start with address 0x80400000
+[build.py] application ch2b_power_3 start with address 0x80400000
+[build.py] application ch2b_power_5 start with address 0x80400000
+[build.py] application ch2b_power_7 start with address 0x80400000
+[build.py] application ch3_taskinfo start with address 0x80400000
+[build.py] application ch3b_sleep start with address 0x80400000
+[build.py] application ch3b_sleep1 start with address 0x80400000
+[build.py] application ch3b_yield0 start with address 0x80400000
+[build.py] application ch3b_yield1 start with address 0x80400000
+[build.py] application ch3b_yield2 start with address 0x80400000
+[build.py] application ch4_mmap0 start with address 0x80400000
+[build.py] application ch4_mmap1 start with address 0x80400000
+[build.py] application ch4_mmap2 start with address 0x80400000
+[build.py] application ch4_mmap3 start with address 0x80400000
+[build.py] application ch4_unmap start with address 0x80400000
+[build.py] application ch4_unmap2 start with address 0x80400000
+make[1]: 离开目录“/home/yjn/rust_project/lab2-os4-anti-entropy123/user”
+   Compiling os v0.1.0 (/home/yjn/rust_project/lab2-os4-anti-entropy123/os4)
+warning: unused import: `ops::Sub`
+ --> src/mm/address.rs:7:5
+  |
+7 |     ops::Sub,
+  |     ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `address::SimpleRange`
+ --> src/mm/memory_set.rs:4:5
+  |
+4 |     address::SimpleRange, frame_alloc, FrameTracker, PTEFlags, PageTable, PageTableEntry, PhysAddr,
+  |     ^^^^^^^^^^^^^^^^^^^^
+
+warning: unreachable pattern
+  --> src/syscall/mod.rs:47:13
+   |
+47 |             _ => todo!("unsupported syscall handle function"),
+   |             ^
+   |
+   = note: `#[warn(unreachable_patterns)]` on by default
+
+warning: unused variable: `ctx`
+  --> src/mm/mod.rs:34:27
+   |
+34 | pub fn page_fault_handler(ctx: &Task, va: VirtAddr) -> PageFaultResult {
+   |                           ^^^ help: if this is intentional, prefix it with an underscore: `_ctx`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `va`
+  --> src/mm/mod.rs:34:39
+   |
+34 | pub fn page_fault_handler(ctx: &Task, va: VirtAddr) -> PageFaultResult {
+   |                                       ^^ help: if this is intentional, prefix it with an underscore: `_va`
+
+warning: unused variable: `idx`
+  --> src/mm/memory_set.rs:58:14
+   |
+58 |         for (idx, area) in self.areas.iter().enumerate() {
+   |              ^^^ help: if this is intentional, prefix it with an underscore: `_idx`
+
+warning: type alias `PageFaultResult` is never used
+  --> src/mm/mod.rs:32:6
+   |
+32 | type PageFaultResult = Result<(), ()>;
+   |      ^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: function `page_fault_handler` is never used
+  --> src/mm/mod.rs:34:8
+   |
+34 | pub fn page_fault_handler(ctx: &Task, va: VirtAddr) -> PageFaultResult {
+   |        ^^^^^^^^^^^^^^^^^^
+
+warning: function `translated_byte_buffer` is never used
+   --> src/mm/page_table.rs:137:8
+    |
+137 | pub fn translated_byte_buffer(token: usize, ptr: *const u8, len: usize) -> Vec<&'static mut [u8]> {
+    |        ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: associated function `from_token` is never used
+  --> src/mm/page_table.rs:74:12
+   |
+74 |     pub fn from_token(satp: usize) -> Self {
+   |            ^^^^^^^^^^
+
+warning: `os` (bin "os") generated 10 warnings
+    Finished release [unoptimized + debuginfo] target(s) in 0.49s
+[rustsbi] RustSBI version 0.3.0-alpha.4, adapting to RISC-V SBI v1.0.0
+.______       __    __      _______.___________.  _______..______   __
+|   _  \     |  |  |  |    /       |           | /       ||   _  \ |  |
+|  |_)  |    |  |  |  |   |   (----`---|  |----`|   (----`|  |_)  ||  |
+|      /     |  |  |  |    \   \       |  |      \   \    |   _  < |  |
+|  |\  \----.|  `--'  |.----)   |      |  |  .----)   |   |  |_)  ||  |
+| _| `._____| \______/ |_______/       |__|  |_______/    |______/ |__|
+[rustsbi] Implementation     : RustSBI-QEMU Version 0.2.0-alpha.2
+[rustsbi] Platform Name      : riscv-virtio,qemu
+[rustsbi] Platform SMP       : 1
+[rustsbi] Platform Memory    : 0x80000000..0x88000000
+[rustsbi] Boot HART          : 0
+[rustsbi] Device Tree Region : 0x87e00000..0x87e00f85
+[rustsbi] Firmware Address   : 0x80000000
+[rustsbi] Supervisor Address : 0x80200000
+[rustsbi] pmp01: 0x00000000..0x80000000 (-wr)
+[rustsbi] pmp02: 0x80000000..0x80200000 (---)
+[rustsbi] pmp03: 0x80200000..0x88000000 (xwr)
+[rustsbi] pmp04: 0x88000000..0x00000000 (-wr)
+[kernel] Hello, world!
+[34m[ INFO] .text [0x80200000, 0x80227000)[0m
+[34m[ INFO] .rodata [0x80227000, 0x8022d000)[0m
+[34m[ INFO] .data [0x8022d000, 0x802b7000)[0m
+[34m[ INFO] .bss [0x802b7000, 0x80759000)[0m
+[34m[ INFO] mapping .text section[0m
+[34m[ INFO] mapping .rodata section[0m
+[34m[ INFO] mapping .data section[0m
+[34m[ INFO] mapping .bss section[0m
+[34m[ INFO] mapping physical memory[0m
+[kernel] back to world!
+[34m[ INFO] remap_test passed![0m
+[34m[ INFO] will run next task, task_idx=13[0m
+[34m[ INFO] task_13 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=14[0m
+[34m[ INFO] task_14 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=15[0m
+[34m[ INFO] task_15 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_17 sys_mmap, receive args start=0x10000000, end=0x10001000, len=0x1000, port=0x3[0m
+[34m[ INFO] task_17 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=13[0m
+[34m[ INFO] task_13 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_13 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_13 sys_mmap, receive args start=0x10000000, end=0x10001000, len=0x1000, port=0x3[0m
+[34m[ INFO] task_13 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=14[0m
+[34m[ INFO] task_14 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_14 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_14 sys_mmap, receive args start=0x10000000, end=0x10001000, len=0x1000, port=0x1[0m
+[34m[ INFO] task_14 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=15[0m
+[34m[ INFO] task_15 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_16 sys_mmap, receive args start=0x10000000, end=0x10001000, len=0x1000, port=0x3[0m
+[34m[ INFO] task_16 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_17 sys_mmap, receive args start=0x10001000, end=0x10003000, len=0x2000, port=0x3[0m
+[34m[ INFO] task_17 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=13[0m
+[34m[ INFO] task_13 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_13 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x807a8000, len=14[0m
+Test 04_1 OK!
+[34m[ INFO] task_13 syscall ret=e, task.trap_ctx.x[10]=e[0m
+[34m[ INFO] will run next task, task_idx=14[0m
+[34m[ INFO] task_14 scause=Exception(StorePageFault), stval=0x10000000[0m
+[34m[ INFO] page fault, try to access virtual address 0x10000000[0m
+[34m[ INFO] will run next task, task_idx=15[0m
+[34m[ INFO] task_15 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_16 sys_mmap, receive args start=0xffff000, end=0x10000001, len=0x1001, port=0x3[0m
+[34m[ INFO] task_16 syscall ret=ffffffffffffffff, task.trap_ctx.x[10]=ffffffffffffffff[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=215, name=Munmap[0m
+[34m[ INFO] task_17 sys_unmmap, receive args start=0x10000000, len=0x1000[0m
+[34m[ INFO] task_17, unmap_area select area 4[0m
+[34m[ INFO] task_17 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=13[0m
+[34m[ INFO] task_13 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_13 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x807a8000, len=0[0m
+[34m[ INFO] task_13 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=15[0m
+[34m[ INFO] task_15 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_15 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_15 sys_mmap, receive args start=0x10000000, end=0x10001000, len=0x1000, port=0x2[0m
+[34m[ INFO] task_15 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_17 sys_mmap, receive args start=0xffff000, end=0x10000001, len=0x1001, port=0x3[0m
+[34m[ INFO] task_17 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_18 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_18 sys_mmap, receive args start=0x10000000, end=0x10001000, len=0x1000, port=0x3[0m
+[34m[ INFO] task_18 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=13[0m
+[34m[ INFO] task_13 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=15[0m
+[34m[ INFO] task_15 scause=Exception(LoadPageFault), stval=0x10000000[0m
+[34m[ INFO] page fault, try to access virtual address 0x10000000[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_16 sys_mmap, receive args start=0x10001001, end=0x10002001, len=0x1000, port=0x3[0m
+[34m[ INFO] task_16 syscall ret=ffffffffffffffff, task.trap_ctx.x[10]=ffffffffffffffff[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_18 syscall_handler, num=215, name=Munmap[0m
+[34m[ INFO] task_18 sys_unmmap, receive args start=0x10000000, len=0x1001[0m
+[34m[ INFO] task_18, unmap_area select area 18446744073709551615[0m
+[34m[ INFO] task_18 syscall ret=ffffffffffffffff, task.trap_ctx.x[10]=ffffffffffffffff[0m
+[34m[ INFO] will run next task, task_idx=13[0m
+[34m[ INFO] task_13 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_13 syscall_handler, num=93, name=Exit[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x807f0000, len=28[0m
+task_17 Test 04_5 ummap OK!
+[34m[ INFO] task_17 syscall ret=1c, task.trap_ctx.x[10]=1c[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_18 syscall_handler, num=215, name=Munmap[0m
+[34m[ INFO] task_18 sys_unmmap, receive args start=0x10000001, len=0xfff[0m
+[34m[ INFO] task_18 syscall ret=ffffffffffffffff, task.trap_ctx.x[10]=ffffffffffffffff[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x807f0000, len=0[0m
+[34m[ INFO] task_17 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_18 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x80805000, len=21[0m
+Test 04_6 ummap2 OK!
+[34m[ INFO] task_18 syscall ret=15, task.trap_ctx.x[10]=15[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=17[0m
+[34m[ INFO] task_17 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_17 syscall_handler, num=93, name=Exit[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_18 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x80805000, len=0[0m
+[34m[ INFO] task_18 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_16 sys_mmap, receive args start=0x10001000, end=0x10002000, len=0x1000, port=0x0[0m
+[34m[ INFO] task_16 sys_mmap failed, receive meaningless port? port=0x0[0m
+[34m[ INFO] task_16 syscall ret=ffffffffffffffff, task.trap_ctx.x[10]=ffffffffffffffff[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=222, name=Mmap[0m
+[34m[ INFO] task_16 sys_mmap, receive args start=0x10001000, end=0x10002000, len=0x1000, port=0xb[0m
+[34m[ INFO] task_16 sys_mmap failed, receive bad port? port=0xb[0m
+[34m[ INFO] task_16 syscall ret=ffffffffffffffff, task.trap_ctx.x[10]=ffffffffffffffff[0m
+[34m[ INFO] will run next task, task_idx=18[0m
+[34m[ INFO] task_18 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_18 syscall_handler, num=93, name=Exit[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x807de000, len=19[0m
+Test 04_4 test OK!
+[34m[ INFO] task_16 syscall ret=13, task.trap_ctx.x[10]=13[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=64, name=Write[0m
+[34m[ INFO] sys_write args, fd=1, buf=0x807de000, len=0[0m
+[34m[ INFO] task_16 syscall ret=0, task.trap_ctx.x[10]=0[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Interrupt(SupervisorTimer), stval=0x0[0m
+[34m[ INFO] Timer interrupt.[0m
+[34m[ INFO] will run next task, task_idx=16[0m
+[34m[ INFO] task_16 scause=Exception(UserEnvCall), stval=0x0[0m
+[34m[ INFO] task_16 syscall_handler, num=93, name=Exit[0m
+Panicked at src/task/mod.rs:10 all task complete!

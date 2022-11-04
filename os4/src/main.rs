@@ -50,6 +50,5 @@ pub fn rust_main() -> ! {
     //trap::enable_interrupt();
     trap::enable_timer_interrupt();
     timer::set_next_trigger();
-    task::run_first_task();
-    panic!("Unreachable in rust_main!");
+    task::run_next_task();
 }
