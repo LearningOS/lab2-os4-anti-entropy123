@@ -1,8 +1,8 @@
 //! Implementation of [`MapArea`] and [`MemorySet`].
-//! 
+//!
 use super::{
-    frame_alloc, FrameTracker, PTEFlags, PageTable, PageTableEntry, PhysAddr, PhysPageNum,
-    StepByOne, VPNRange, VirtAddr, VirtPageNum,
+    address::SimpleRange, frame_alloc, FrameTracker, PTEFlags, PageTable, PageTableEntry, PhysAddr,
+    PhysPageNum, StepByOne, VPNRange, VirtAddr, VirtPageNum,
 };
 use crate::config::{
     KERNEL_STACK_PAGE_NUM, KERNEL_STACK_SIZE, MEMORY_END, PAGE_SIZE, TRAMPOLINE, TRAP_CONTEXT,
@@ -54,11 +54,40 @@ impl MemorySet {
         start_va: VirtAddr,
         end_va: VirtAddr,
         permission: MapPermission,
-    ) {
+    ) -> Result<(), ()> {
+        for area in &self.areas {
+            let range = area.vpn_range;
+            if range.contains(start_va.floor()) || range.contains(end_va.floor()) {
+                return Err(());
+            }
+        }
         self.push(
             MapArea::new(start_va, end_va, MapType::Framed, permission),
             None,
         );
+        Ok(())
+    }
+    pub fn unmap_area(
+        &mut self,
+        task_id: usize,
+        start_va: VirtAddr,
+        end_va: VirtAddr,
+    ) -> Result<(), ()> {
+        let mut target = usize::MAX;
+        for (idx, area) in self.areas.iter().enumerate() {
+            let range = area.vpn_range;
+            if range.get_start() == start_va.floor() && range.get_end() == end_va.ceil() {
+                target = idx;
+                break;
+            }
+        }
+        log::info!("task_{}, unmap_area select area {}", task_id, target);
+        if target == usize::MAX {
+            return Err(());
+        }
+        self.areas[target].unmap(&mut self.page_table);
+        self.areas.remove(target);
+        Ok(())
     }
     fn push(&mut self, mut map_area: MapArea, data: Option<&[u8]>) {
         map_area.map(&mut self.page_table);
@@ -304,6 +333,7 @@ impl MapArea {
                 .unwrap()
                 .ppn()
                 .get_bytes_array()[..src.len()];
+
             dst.copy_from_slice(src);
             start += PAGE_SIZE;
             if start >= len {

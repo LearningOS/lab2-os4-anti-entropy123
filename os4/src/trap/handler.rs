@@ -12,14 +12,14 @@ use riscv::register::{
 pub fn trap_handler(ctx: &mut Task) -> ! {
     let trap_ctx = &mut ctx.trap_ctx;
     log::debug!(
-        "trap_handler, task.id={}, task.trap_ctx={}",
+        "task_{} trap_handler, task.trap_ctx={}",
         ctx.id,
         trap_ctx
     );
     let scause = scause::read();
     let stval = stval::read();
 
-    log::info!("scause={:?}, stval=0x{:x}", scause.cause(), stval);
+    log::info!("task_{} scause={:?}, stval=0x{:x}", ctx.id, scause.cause(), stval);
 
     match scause.cause() {
         Trap::Exception(Exception::UserEnvCall) => {

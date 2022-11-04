@@ -2,7 +2,10 @@
 
 use super::PageTableEntry;
 use crate::config::{PAGE_SIZE, PAGE_SIZE_BITS};
-use core::fmt::{self, Debug, Formatter};
+use core::{
+    fmt::{self, Debug, Formatter},
+    ops::Sub,
+};
 
 /// physical address
 #[derive(Copy, Clone, Ord, PartialOrd, Eq, PartialEq)]
@@ -175,7 +178,7 @@ impl StepByOne for VirtPageNum {
     }
 }
 
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, PartialEq, PartialOrd)]
 /// a simple range structure for type T
 pub struct SimpleRange<T>
 where
@@ -197,6 +200,9 @@ where
     }
     pub fn get_end(&self) -> T {
         self.r
+    }
+    pub fn contains(&self, v: T) -> bool {
+        v >= self.l && v < self.r
     }
 }
 impl<T> IntoIterator for SimpleRange<T>

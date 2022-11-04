@@ -31,8 +31,8 @@ impl TaskManager {
 
     pub fn find_next_ready_task(&mut self) -> Option<&mut Task> {
         let current = self.next_task;
-        for i in current..(current + MAX_APP_NUM) {
-            let app_id = i % MAX_APP_NUM;
+        for i in current..(current + MAX_APP_NUM) {            
+            let app_id = i % 19;
             let task = match self.task_list[app_id].map(|ptr| unsafe { &mut *(ptr as *mut Task) }) {
                 None => continue,
                 Some(task) => task,
